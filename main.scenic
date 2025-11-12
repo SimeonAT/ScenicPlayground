@@ -1,5 +1,20 @@
 MESHES_PATH = "../Scenic/assets/meshes/"
 
+ego = new Object with shape ConeShape(),
+        with width 2,
+        with length 2,
+        with height 1.5,
+        facing (-90 deg, 45 deg, 0)
+
 chair = new Object at (4,0,2),
-            with shape MeshShape.fromFile(localPath(MESHES_PATH + "chair.obj.bz2"),
+          with shape MeshShape.fromFile(localPath(MESHES_PATH + "chair.obj.bz2"),
             initial_rotation=(0,90 deg,0), dimensions=(1,1,1))
+
+plane_shape = MeshShape.fromFile(path=localPath(MESHES_PATH + "classic_plane.obj.bz2"))
+
+plane = new Object left of chair by 1,
+            with shape plane_shape,
+            with width 2,
+            with length 2,
+            with height 1,
+            facing directly toward ego
