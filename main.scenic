@@ -1,9 +1,9 @@
 MESHES_PATH = "../Scenic/assets/meshes/"
 
 ego = new Object with shape ConeShape(),
-        with width 2,
-        with length 2,
-        with height 1.5,
+        with width 100,
+        with length 100,
+        with height 100,
         facing (-90 deg, 45 deg, 0)
 
 chair = new Object at (4,0,2),
