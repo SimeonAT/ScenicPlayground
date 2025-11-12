@@ -1,4 +1,4 @@
 all: scenic
 
 scenic:
-	scenic main.scenic
+	scenic --axes main.scenic
